@@ -1,0 +1,2 @@
+include ':app', ':httpmodule', ':mainmodule', ':utilmodule', ':commonbasemodule'
+rootProject.name='ProjectStructure'
