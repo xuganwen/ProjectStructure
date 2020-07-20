@@ -2,7 +2,8 @@ package com.xuganwen.utilmodule;
 
 import android.widget.Toast;
 
-import com.xuganwen.mainmodule.MyApplication;
+import com.xuganwen.commonbasemodule.MyApplication;
+
 
 /**
  * 文件描述:  吐司提示工具类

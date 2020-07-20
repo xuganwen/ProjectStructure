@@ -3,7 +3,7 @@ package com.xuganwen.utilmodule;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.xuganwen.mainmodule.MyApplication;
+import com.xuganwen.commonbasemodule.MyApplication;
 
 /**
  * 文件描述:SharedPreferences工具类
