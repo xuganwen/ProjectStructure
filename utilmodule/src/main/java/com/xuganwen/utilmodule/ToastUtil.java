@@ -6,7 +6,7 @@ import com.xuganwen.commonbasemodule.MyApplication;
 
 
 /**
- * 文件描述:  吐司提示工具类
+ * 文件描述:  Toast提示工具类
  * 作者: 徐干稳
  * 创建日期: 2020/04/01 8:25
  * 版本 1.0

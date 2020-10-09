@@ -24,4 +24,11 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.xuganwen.utilmodule.test", appContext.getPackageName());
     }
+
+
+    @Test
+    public void testGsonUtil(){
+        String str=GsonUtil.toJson(12);
+        System.out.printf(str);
+    }
 }
