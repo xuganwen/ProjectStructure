@@ -1,0 +1,57 @@
+
+ext{
+
+
+    testImplementation_dependency=[
+            junit:'junit:junit:4.12',
+    ]
+
+    androidTestImplementation_dependency=[
+            junit1:'androidx.test.ext:junit:1.1.1',
+            espresso_test: 'androidx.test.espresso:espresso-core:3.2.0',
+    ]
+
+    common_dependency=[
+            appcompat: 'androidx.appcompat:appcompat:1.1.0',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.3',
+            room: 'androidx.room:room-runtime:2.2.5',
+
+            rxjava3: 'io.reactivex.rxjava3:rxjava:3.0.4',
+            rxandroid3: 'io.reactivex.rxjava3:rxandroid:3.0.0',
+            // 基础依赖包，必须要依赖
+            immersionbar: 'com.gyf.immersionbar:immersionbar:3.0.0',
+            // fragment快速实现（可选）
+            immersionbar_Components:'com.gyf.immersionbar:immersionbar-components:3.0.0',
+
+            arouter:'com.alibaba:arouter-api:1.5.1',
+
+            retrofit: 'com.squareup.retrofit2:retrofit:2.9.0',
+            converter_gson: 'com.squareup.retrofit2:converter-gson:2.9.0',
+            adapter_rxjava2 :'com.squareup.retrofit2:adapter-rxjava3:2.9.0',
+
+            /*rxlifecycle: 'com.trello.rxlifecycle2:rxlifecycle:2.2.2',
+            rxlifecycle_components: 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2',
+
+            lifecycle_extensions: 'android.arch.lifecycle:extensions:1.1.1',
+            lifecycle_compiler : 'android.arch.lifecycle:compiler:1.1.1',*/
+
+
+            lifecycle:'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha02',
+
+            autodispose: 'com.uber.autodispose:autodispose:1.1.0',
+            autodispose_android_archcomponents:'com.uber.autodispose:autodispose-android-archcomponents:1.1.0',
+
+            refresh:'com.scwang.smart:refresh-header-material:2.0.3',
+            refreshkernel:'com.scwang.smart:refresh-layout-kernel:2.0.3',
+
+            recyclerview:  "androidx.recyclerview:recyclerview:1.2.0-beta02",
+            basequickAdapter:'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1',
+
+    ]
+
+    annotation_processor=[
+            arouter:'com.alibaba:arouter-compiler:1.5.1',
+            lifecycle: 'androidx.lifecycle:lifecycle-compiler:2.0.0',
+            room:  'android.arch.persistence.room:compiler:2.2.5'
+    ]
+}

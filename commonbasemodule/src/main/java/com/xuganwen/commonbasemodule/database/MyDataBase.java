@@ -14,7 +14,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
  * 创建日期: 2020/04/02 10:32
  * 版本 1.0
  */
-@Database(entities = {UserInfo.class}, version = 1)
+@Database(entities = {UserInfo.class}, version = 1,exportSchema = false)
 public abstract class MyDataBase extends RoomDatabase {
 
 
@@ -24,7 +24,7 @@ public abstract class MyDataBase extends RoomDatabase {
 
     static String UpGradeSQL = "CREATE TABLE `Fruit` (`FruitId` INTEGER NOT NULL, "
             + "`FruitName` TEXT, PRIMARY KEY(`FruitId`))";
-    /* 升级数据库的方法 -- 当前为从 版本1 升级到 版本2 */
+//     升级数据库的方法 -- 当前为从 版本1 升级到 版本2
     public static final Migration MIGRATION= new Migration(DB_LOCAL_VERSION, DB_LOCAL_VERSION_NEW) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
@@ -35,4 +35,6 @@ public abstract class MyDataBase extends RoomDatabase {
     };
 
     public abstract UserDao getUserDao();
+
+
 }

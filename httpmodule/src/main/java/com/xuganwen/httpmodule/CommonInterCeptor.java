@@ -1,8 +1,10 @@
 package com.xuganwen.httpmodule;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 import okhttp3.Interceptor;
+import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.Response;
 
@@ -25,8 +27,12 @@ public class CommonInterCeptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
-        request = request.newBuilder().addHeader("cookie", "").build();
+
+       /*  request=request.newBuilder().addHeader("Content-Type", "text/html; charset=UTF-8")
+                 .addHeader("Content-Type", "text/html; charset=gb2312")
+                 .build();*/
         Response proceed = chain.proceed(request);
+
         return proceed;
     }
 

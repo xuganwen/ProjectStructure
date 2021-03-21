@@ -3,7 +3,7 @@ package com.xuganwen.utilmodule;
 import android.util.Log;
 
 /**
- * 文件描述:
+ * 文件描述:  日志工具类
  * 作者: 徐干稳
  * 创建日期: 2020/10/09 21:35
  * 版本 1.0

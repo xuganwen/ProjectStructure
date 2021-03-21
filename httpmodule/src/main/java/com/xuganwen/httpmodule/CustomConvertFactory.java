@@ -42,6 +42,7 @@ public class CustomConvertFactory extends Converter.Factory {
 
     protected static CustomConvertFactory create() {
         return new CustomConvertFactory(new Gson());
+
     }
 
     public @Nullable Converter<ResponseBody, ?> responseBodyConverter(
@@ -50,7 +51,7 @@ public class CustomConvertFactory extends Converter.Factory {
         return new Converter<ResponseBody, Object>() {
             @Override
             public Object convert(ResponseBody value) throws IOException {
-                JsonReader jsonReader = gson.newJsonReader(value.charStream());
+                /*JsonReader jsonReader = gson.newJsonReader(value.charStream());
                 try {
                     Object result = adapter.read(jsonReader);
                     if (jsonReader.peek() != JsonToken.END_DOCUMENT) {
@@ -59,6 +60,14 @@ public class CustomConvertFactory extends Converter.Factory {
                     return result;
                 } finally {
                     value.close();
+                }*/
+
+                String temp = new String(value.bytes(), "utf-8");
+                try{
+                    return adapter.fromJson(temp);
+                }catch (IOException e){
+
+                        throw new IllegalArgumentException("未知异常。。。。");
                 }
             }
         };

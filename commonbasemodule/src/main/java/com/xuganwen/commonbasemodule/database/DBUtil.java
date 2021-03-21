@@ -12,7 +12,7 @@ import androidx.room.Room;
  */
 public class DBUtil {
 
-    private static MyDataBase myDataBase;
+    public static MyDataBase myDataBase;
 
 
     /**

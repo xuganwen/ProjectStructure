@@ -31,6 +31,13 @@ public class SpUtil {
     /**
      * 保存数据
      */
+    public static String getString(String lableName) {
+        SharedPreferences.Editor edit = sharedPreferences.edit();
+        return sharedPreferences.getString(lableName,"");
+    }
+    /**
+     * 保存数据
+     */
     public static void saveInt(String lableName, int value) {
         SharedPreferences.Editor edit = sharedPreferences.edit();
         edit.putInt(lableName, value);

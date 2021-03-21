@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xuganwen.projectstructure">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.xuganwen.commonbasemodule.MyApplication"
         android:allowBackup="true"
@@ -10,15 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:resizeableActivity="true"
         android:networkSecurityConfig="@xml/security_xml">
         <activity android:name="com.xuganwen.mainmodule.ui.SplashActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            android:theme="@style/fullScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
     </application>
 
 </manifest>
