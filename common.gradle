@@ -1,7 +1,6 @@
 
 ext{
 
-
     testImplementation_dependency=[
             junit:'junit:junit:4.12',
     ]

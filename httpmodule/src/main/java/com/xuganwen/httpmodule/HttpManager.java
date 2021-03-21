@@ -68,7 +68,7 @@ public class HttpManager {
                 .build();
 
             retrofit = new Retrofit.Builder()
-                    .addConverterFactory(GsonConverterFactory.create())
+                    .addConverterFactory(CustomConvertFactory.create())
                     .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                     .baseUrl(BASEURL)
                     .client(client)
